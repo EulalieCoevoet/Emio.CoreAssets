@@ -105,6 +105,7 @@ def createScene(rootnode):
     rootnode.dt = 0.01
     rootnode.gravity = [0., -9810., 0.]
     addSolvers(simulation)
+    simulation.EulerImplicitSolver.firstOrder = True # Quasi-static 
 
     settings.addObject('RequiredPlugin', name='Sofa.Component.Constraint.Projective')
     # Needed to use components [FixedProjectiveConstraint]
